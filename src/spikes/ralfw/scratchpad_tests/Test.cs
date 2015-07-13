@@ -17,6 +17,9 @@ namespace scratchpad_tests
 			ci = new CultureInfo ("de-de");
 			d = DateTime.Parse ("13.12.2010 14:00", ci);
 			Assert.AreEqual (new DateTime (2010, 12, 13, 14, 0, 0), d);
+
+			d = DateTime.Parse ("13.12.2010", new CultureInfo ("de-de"));
+			Assert.AreEqual (new DateTime (2010, 12, 13, 0, 0, 0), d);
 		}
 	}
 }
